@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: backgrounds_bundle
+  m_EditorClassIdentifier: 
+  m_GroupName: backgrounds_bundle
+  m_Data:
+    m_SerializedData: []
+  m_GUID: ae6494a00e707354f830166e44fc7573
+  m_SerializeEntries:
+  - m_GUID: dede5f4548992dd4ba1c9840a451ed31
+    m_Address: Assets/_Root/Sprites/SkySprite.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9a03924cfa2bc044eb0636711b68053e
+    m_Address: Assets/_Root/Sprites/Ui/button/board.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 6d1674ae13d36a044aeed6e136062901, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: b1603dad2ed1854449e933457914e509, type: 2}
+    - {fileID: 11400000, guid: 25a95749dbecd52498aad78cfb1cc933, type: 2}

@@ -18,9 +18,12 @@ namespace Ui
         [SerializeField] private Button _buttonDailyReward;
         [SerializeField] private Button _exitGame;
 
+        [SerializeField] private Button _buttonRussianLanguage;
+        [SerializeField] private Button _buttonEnglishLanguage;
 
         public void Init(UnityAction startGame, UnityAction openSettings,
-            UnityAction openShed, UnityAction playRewardedAds, UnityAction<string> buyProduct, UnityAction openDailyReward, UnityAction exitGame)
+            UnityAction openShed, UnityAction playRewardedAds, UnityAction<string> buyProduct,
+            UnityAction openDailyReward, UnityAction exitGame, UnityAction translateToRussain, UnityAction translateToEnglish)
         {
             _buttonStart.onClick.AddListener(startGame);
             _buttonSettings.onClick.AddListener(openSettings);
@@ -29,6 +32,9 @@ namespace Ui
             _buttonBuyProduct.onClick.AddListener(() => buyProduct(_productId));
             _buttonDailyReward.onClick.AddListener(openDailyReward);
             _exitGame.onClick.AddListener(exitGame);
+
+            _buttonRussianLanguage.onClick.AddListener(translateToRussain);
+            _buttonEnglishLanguage.onClick.AddListener(translateToEnglish);
         }
 
         public void OnDestroy()
@@ -40,6 +46,9 @@ namespace Ui
             _buttonBuyProduct.onClick.RemoveAllListeners();
             _buttonDailyReward.onClick.RemoveAllListeners();
             _exitGame.onClick.RemoveAllListeners();
+
+            _buttonRussianLanguage.onClick.RemoveAllListeners();
+            _buttonEnglishLanguage.onClick.RemoveAllListeners();
         }
     }
 }
