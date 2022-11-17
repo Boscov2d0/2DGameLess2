@@ -3,11 +3,15 @@ using Profile;
 using Services;
 using UnityEngine;
 using Object = UnityEngine.Object;
+using UnityEngine.Localization.Settings;
 
 namespace Ui
 {
     internal class MainMenuController : BaseController
     {
+        private const int EnglishIndex = 0;
+        private const int RussianIndex = 1;
+
         private readonly ResourcePath _resourcePath = new ResourcePath("Prefabs/Ui/MainMenu");
         private readonly ProfilePlayer _profilePlayer;
         private readonly MainMenuView _view;
@@ -17,7 +21,7 @@ namespace Ui
         {
             _profilePlayer = profilePlayer;
             _view = LoadView(placeForUi);
-            _view.Init(StartGame, OpenSettings, OpenShed, PlayRewardedAds, BuyProduct, OpenDailyReward, ExitGame);
+            _view.Init(StartGame, OpenSettings, OpenShed, PlayRewardedAds, BuyProduct, OpenDailyReward, ExitGame, TranslateToRussian, TranslateToEnglish);
 
             SubscribeAds();
             SubscribeIAP();
@@ -65,6 +69,10 @@ namespace Ui
             Application.Quit();
         }
 
+        private void TranslateToRussian() =>
+            ChangeLanguage(RussianIndex);
+        private void TranslateToEnglish() =>
+            ChangeLanguage(EnglishIndex);
         private void SubscribeAds()
         {
             ServiceRoster.AdsService.RewardedPlayer.Finished += OnAdsFinished;
@@ -96,5 +104,8 @@ namespace Ui
 
         private void OnIAPSucceed() => Log("Purchase succeed");
         private void OnIAPFailed() => Log("Purchase failed");
+
+        private void ChangeLanguage(int index) =>
+            LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[index];
     }
 }

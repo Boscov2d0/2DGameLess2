@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: MainGameMenuSprite Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: MainGameMenuSprite
+  m_TableCollectionNameGuidString: 08a9ffca36679f645a6a65eff2a8386b
+  m_Entries:
+  - m_Id: 8322838528
+    m_Key: Start_Game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1126822080512
+    m_Key: Daily_Reward
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1175715082240
+    m_Key: Shed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1205465280512
+    m_Key: Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1234955431936
+    m_Key: Exit
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items:
+    - rid: 3784806388852588623
+  m_KeyGenerator:
+    rid: 3784806388852588622
+  references:
+    version: 2
+    RefIds:
+    - rid: 3784806388852588622
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1668678898445
+    - rid: 3784806388852588623
+      type: {class: AssetTypeMetadata, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries:
+        - m_KeyId: 8322838528
+          m_TableCodes:
+          - en
+          - ru
+        - m_KeyId: 1126822080512
+          m_TableCodes:
+          - en
+          - ru
+        - m_KeyId: 1175715082240
+          m_TableCodes:
+          - en
+          - ru
+        - m_KeyId: 1205465280512
+          m_TableCodes:
+          - en
+          - ru
+        - m_KeyId: 1234955431936
+          m_TableCodes:
+          - en
+          - ru
+        m_TypeString: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
